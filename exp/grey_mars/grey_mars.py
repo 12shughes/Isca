@@ -2,9 +2,9 @@ import numpy as np
 
 from isca import IscaCodeBase, GreyCodeBase, DiagTable, Experiment, Namelist, GFDL_BASE
 from isca.util import exp_progress
-from ntfy import notify
+#from ntfy import notify
 
-NCORES = 16
+NCORES = 4
 
 # a CodeBase can be a directory on the computer,
 # useful for iterative development
@@ -239,7 +239,7 @@ if __name__=="__main__":
 
 #            with exp_progress(exp, description='o%.0f d{day}' % scale):
                 exp.run(1, use_restart=False, num_cores=NCORES)
-                for i in range(2, 241):
+                for i in range(2, 5): #241):
 #                with exp_progress(exp, description='o%.0f d{day}' % scale):
                     exp.run(i, num_cores=NCORES)
-                notify('top down with conv scheme = '+conv+' has completed', 'isca')
+                #notify('top down with conv scheme = '+conv+' has completed', 'isca')
