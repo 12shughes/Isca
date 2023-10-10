@@ -63,7 +63,7 @@ namelist = Namelist({
         'dt_atmos': 110,
         'days': 0.,
         'seconds': 30.*88440.,
-        'calendar': 'no_calendar'
+        'calendar': 'NO_CALENDAR'
     },
 
     'idealized_moist_phys_nml': {
